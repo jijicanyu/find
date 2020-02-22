@@ -66,3 +66,30 @@
 	font-size: 34rpx;
 	color: grey;
 }
+
+.sliderView{
+  position: relative;
+  width: 93%;
+  margin: 0 15rpx
+}
+.left{
+  position: absolute;
+  width: 90%
+}
+.right{
+  position: absolute;
+  width: 90%
+}
+
+.top {
+    text-align: center;
+}
+
+.des {
+    text-align: center;
+}
+
+.zy-slider {
+    position: relative;
+    margin: 60rpx;
+}

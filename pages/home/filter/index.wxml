@@ -28,6 +28,13 @@
 		</picker>
 	</view>
 
+	<view class="top">min 100 max 1000</view>
+    <view class="des">{{low1}}-{{heigh1}}</view>
+<view class="zy-slider">
+    <zy-slider id="zy-slider1" minValue="{{low1}}" maxValue="{{heigh1}}" min="18" max="100" blockColor="#0099FF" backgroundColor="#B0C4DE" selectedColor="#FF1493" bind:lowValueChange="lowValueChangeAction1"
+                bind:heighValueChange="heighValueChangeAction1" />
+</view>
+
 	<view class="flex-column-center vipLabel">
 		<text>邀请一个新用户，即可获得会员权限，开通</text>
 		<text>以下优先匹配选项</text>
@@ -65,4 +72,5 @@
 	<view class="bg-white">
 		<button bindtap="goFilter" class="cu-btn block bg-blue margin-tb-sm lg">确定</button>
 	</view>
+
 </view>

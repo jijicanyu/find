@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/home/filter/index",
     "pages/guide/index",
     "pages/home/qrcode/index",
     "pages/home/recommend/index",
     "pages/home/index",
-    "pages/home/filter/index",
     "pages/message/index",
     "pages/user/index",
     "pages/user/detail/index",
