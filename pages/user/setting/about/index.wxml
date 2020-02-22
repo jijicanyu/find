@@ -1,16 +1,13 @@
-<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
-    <view slot="content" class="text-black">关于我们</view>
-</cu-custom>
 <view class="user-box">
     <!--设置列表-list-->
     <view class="cu-list menu margin-bottom-xl shadow-lg">
         <view class="cu-item arrow">
-            <navigator class="content" url="/pages/user/private/index" hover-class="none">
+            <navigator class="content" url="/pages/components/private/index" hover-class="none">
                 <text class="text-black">隐私政策</text>
             </navigator>
         </view>
         <view class="cu-item arrow">
-            <navigator class="content" url="/pages/user/agreement/index" hover-class="none">
+            <navigator class="content" url="/pages/components/agreement/index" hover-class="none">
                 <text class="text-black">用户协议</text>
             </navigator>
         </view>

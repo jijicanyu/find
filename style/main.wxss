@@ -33,7 +33,6 @@ page {
 	--brownLight: #ede1d9;
 	--greyLight: #e7ebed;
 	/* 渐变色 */
-	--gradualWrite: linear-gradient(45deg, #ffffff, #ffffff);
 	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
 	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
 	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
@@ -3566,10 +3565,7 @@ scroll-view.cu-steps .cu-item {
 	color: var(--grey);
 	background-color: var(--greyLight);
 }
-.bg-gradual-write {
-	background-image: var(--gradualWrite);
-	color: var(--white);
-}
+
 .bg-gradual-red {
 	background-image: var(--gradualRed);
 	color: var(--white);

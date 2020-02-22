@@ -1,7 +1,4 @@
- <cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
-    <view slot="content" class="text-black">用户详情</view>
-</cu-custom>
- <!-- 用户基本信息 top-->
+  <!-- 用户基本信息 top-->
   <view class="user-detail-box">
     <view class="cu-card bg-white case">
       <view class="image">

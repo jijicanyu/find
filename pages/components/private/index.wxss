@@ -1,0 +1,8 @@
+.policy-box{
+	background: #F7F7F7;
+	color: #9B9B9B;
+	padding: 20rpx;
+}
+.policy-text-title{
+	color: #101010;
+}

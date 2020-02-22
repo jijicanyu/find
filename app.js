@@ -6,12 +6,10 @@ App({
     apiUrl: "http://106.75.232.173:8089/redcord/", 
     uploadUrl: "http://106.75.232.173:8089/redcord/",       // 图片上传地址
     wxappId: "wxdf8ac6f53cd51e7d",                //小程序id
-    user: {
-      sex:''
-    },                                     //用户信息
+    user: {},                                     //用户信息
     isServer:0,                                   //服务是否正常 0正常 1服务异常 2UAA异常
     session: null,                                //鉴权域key(一次获取，减少解密请求)
-    imgCropperSrc:'',                              //头像裁剪
+    imgCropperSrc:''                              //头像裁剪
   },
   onLaunch: function () {
     var that = this;
@@ -24,16 +22,13 @@ App({
           console.log("已授权")
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           if(session !== null && isServer !== 1){
-            // wx.switchTab({
-            //   url: '/pages/home/index'
-            // })
-            // that.checkSession((data)=>{
-            //   console.log('data:',data)
-            //   that.goHome();
-            // });
-             wx.navigateTo({
-              url: '/pages/home/filter/index',
+            wx.switchTab({
+              url: '/pages/home/index'
             })
+            that.checkSession((data)=>{
+              console.log('data:',data)
+              that.goHome();
+            });
           }
         } else {
           console.log("未授权")
@@ -41,25 +36,6 @@ App({
         }
       }
     })
-    wx.getSystemInfo({
-      success: e => {
-        this.globalData.StatusBar = e.statusBarHeight;
-        let capsule = wx.getMenuButtonBoundingClientRect();
-        console.log(capsule)
-        if (capsule) {
-          this.globalData.Custom = capsule;
-          this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
-        } else {
-          this.globalData.CustomBar = e.statusBarHeight + 50;
-        }
-      }
-    })
-  },
-   /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onLoad: function () {
-    
   },
   //再次获取授权
   //当用户第一次拒绝后再次请求授权

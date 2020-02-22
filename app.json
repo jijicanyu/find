@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/guide/index",
+    "pages/components/private/index",
+    "pages/components/agreement/index",
     "pages/home/qrcode/index",
     "pages/home/recommend/index",
     "pages/home/index",
-    "pages/home/filter/index",
     "pages/message/index",
     "pages/user/index",
     "pages/user/detail/index",
@@ -14,8 +15,6 @@
     "pages/user/setting/setting",
     "pages/user/setting/about/index",
     "pages/user/tag/tag",
-    "pages/user/private/index",
-    "pages/user/agreement/index",
     "pages/user/setting/message-setting/message-setting",
     "pages/components/cropper/cropper"
   ],
@@ -23,8 +22,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Find理想之徒",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "black"
   },
   "networkTimeout": {
     "request": 10000,
@@ -55,9 +53,6 @@
         "text": "我"
       }
     ]
-  },
-  "usingComponents": {
-    "cu-custom": "/pages/components/header/header"
   },
   "debug": false,
   "sitemapLocation": "sitemap.json"

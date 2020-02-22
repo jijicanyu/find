@@ -3,8 +3,6 @@ var rts = require("../../utils/rts.js");
 var formatTime = require("../../utils/util.js");
 Page({
   data: {
-    StatusBar: app.globalData.StatusBar,
-    CustomBar: app.globalData.CustomBar,
     list: [
       {
         id:'1',
@@ -42,8 +40,6 @@ Page({
       description:'每日21点整推荐5位适合你的 新朋友，快去认识TA们吧！',
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
     }],
-    filterData:{},
-    from:''
   },
 
   // 生命周期函数--监听页面加载
@@ -51,27 +47,12 @@ Page({
     console.log(app)
   },
   onShow:function(){
-    const that = this;
-    const pages = getCurrentPages();
-    const currPage = pages[pages.length - 1];
     const modalName = wx.getStorageSync("modalShow");
     if(modalName === ''){
-      that.setData({
+        this.setData({
         modalName: true,
       })
     }
-    if(that.data.from === 'filter'){
-      const data = {
-        openId:'1234',
-        ...JSON.parse(currPage.data.filterData)
-      }
-      that.loadData(data)
-      return;
-    }
-    const data = {
-      openId:'1234'
-    }
-    that.loadData(data);
   },
   hideModal(){
     this.setData({
@@ -134,27 +115,6 @@ Page({
   joinFind(){
     wx.navigateTo({
       url: 'qrcode/index'
-    })
-  },
-  showFilter(e) {
-    console.log(e)
-    this.setData({
-      from: 'filter'
-    },()=>{
-      wx.navigateTo({
-        url: './filter/index?from=list',
-      })
-    })    
-  },
-  loadData(data) {
-    var that = this;
-    that.setData({
-      loading: true,
-    })
-    rts.rtPostJson(app.globalData.apiUrl + 'people/list', data, function (res) {
-      console.log(res)
-    }, function (err) {
-      console.log(err)
     })
   },
 });

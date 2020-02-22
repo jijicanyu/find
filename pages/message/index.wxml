@@ -1,28 +1,10 @@
 <scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
-  <cu-custom bgColor="bg-gradual-write" isBack="{{false}}">
-    <view slot="content" class="text-black">消息</view>
-  </cu-custom>
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
       <text class="cuIcon-title text-orange "></text> 消息列表
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <view class="cu-item">
-      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
-      <view class="content">
-        <view class="text-grey">凯尔</view>
-        <view class="text-gray text-sm flex">
-          <text class="text-cut">
-							<text class="cuIcon-infofill text-red  margin-right-xs"></text> 我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。
-          </text>
-        </view>
-      </view>
-      <view class="action">
-        <view class="text-grey text-xs">22:20</view>
-        <view class="cu-tag round bg-grey sm">5</view>
-      </view>
-    </view>
     <view class="cu-item">
       <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
         <view class="cu-tag badge">99+</view>
@@ -41,63 +23,15 @@
         <view class="cuIcon-notice_forbid_fill text-gray"></view>
       </view>
     </view>
-    <view class="cu-item ">
-      <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-      <view class="content">
-        <view class="text-pink">
-          <text class="text-cut">莫甘娜</text>
-        </view>
-        <view class="text-gray text-sm flex">
-          <text class="text-cut">凯尔，你被自己的光芒变的盲目！</text>
-        </view>
-      </view>
-      <view class="action">
-        <view class="text-grey text-xs">22:20</view>
-        <view class="cu-tag round bg-red sm">5</view>
-      </view>
-    </view>
-    <view class="cu-item grayscale">
-      <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81007.jpg);"></view>
-      <view class="content">
-        <view>
-          <text class="text-cut">伊泽瑞尔</text>
-          <view class="cu-tag round bg-orange sm">断开连接...</view>
-        </view>
-        <view class="text-gray text-sm flex">
-          <text class="text-cut"> 等我回来一个打十个</text>
-        </view>
-      </view>
-      <view class="action">
-        <view class="text-grey text-xs">22:20</view>
-        <view class="cu-tag round bg-red sm">5</view>
-      </view>
-    </view>
-    <view class="cu-item cur">
-      <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81020.jpg);">
-        <view class="cu-tag badge"></view>
-      </view>
-      <view class="content">
-        <view>
-          <text class="text-cut">瓦罗兰大陆-睡衣守护者-新手保护营</text>
-          <view class="cu-tag round bg-orange sm">6人</view>
-        </view>
-        <view class="text-gray text-sm flex">
-          <text class="text-cut"> 伊泽瑞尔：<text class="cuIcon-locationfill text-orange margin-right-xs"></text> 传送中...</text>
-        </view>
-      </view>
-      <view class="action">
-        <view class="text-grey text-xs">22:20</view>
-        <view class="cuIcon-notice_forbid_fill text-gray"></view>
-      </view>
-    </view>
   </view>
+
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
       <text class="cuIcon-title text-orange "></text> 列表左滑
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{1}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
       <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
       <view class="content">
         <view class="text-grey">文晓港</view>
