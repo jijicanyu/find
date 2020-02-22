@@ -1,0 +1,42 @@
+.user-detail-box{
+	position: relative;
+	background: #F5F5F5;
+}
+.user-avator{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,0%);
+}
+.user-avator .cu-avatar{
+	border: 2px solid #fff;
+}
+.user-avator .cu-avatar.lg{
+	width: 120rpx;
+	height: 120rpx;
+}
+.user-avator .cu-tag{
+	top: 70% !important;
+}
+.user-info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20rpx;
+}
+.user-info .user-info-item{
+	padding: 0 5rpx;
+}
+.user-info-item-line{
+	height: 20rpx;
+	width: 1rpx;
+	border-right: 1rpx solid #2b2b2b;
+	margin: 0 2rpx;
+}
+.user-info-edit{
+	position: absolute;
+	top: 30rpx;
+	right: 30rpx;
+	color: #fff;
+	font-size: 40rpx;
+}

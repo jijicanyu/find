@@ -1,0 +1,71 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{false}}">
+    <view slot="content" class="text-black">用户</view>
+</cu-custom>
+<view class="user-box">
+    <!--用户首页-header-->
+    <view class="user-top flex-row-between-center">
+        <view class="user-top-avatar flex-row-start">
+             <view class="cu-avatar xl round margin-left">
+                 <image class="cu-avatar round user-box-avatar" src="{{avatarUrl}}"></image>
+             </view>
+            <view class="user-top-name">user</view>
+        </view>
+        <view class="user-top-btn flex-row-start-center">
+            <view class="user-top-btn-item flex-row-between-center" bindtap="toUserDetail">    
+                <text class="user-top-btn-text">我的首页</text>
+                <text class="cuIcon-myfill text-red user-top-btn-icon"></text>
+            </view>
+            <view class="user-top-btn-item flex-row-between-center" bindtap="toFocusList">
+                <text class="user-top-btn-text">我的关注</text>
+                <text class="cuIcon-favor text-yellow user-top-btn-icon"></text>
+            </view>
+        </view>
+    </view>
+    <!--用户列表-list-->
+    <view class="cu-list menu margin-top-sm margin-bottom-xl shadow-lg">
+        <view class="cu-item">
+            <view class="content">
+                <text class="text-black">做个自我介绍</text>
+            </view>
+            <view class="action">
+                <view class="cu-tag round bg-blue light">分享</view>
+            </view>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/about/log/log" hover-class="none">
+                <text class="text-black">身份认证（敬请期待）</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/user/userInfo/userInfo" hover-class="none">
+                <text class="text-black">我的资料</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/user/question/question" hover-class="none">
+                <text class="text-black">我的问题</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/user/forward/forward" hover-class="none">
+                <text class="text-black">邀请好友一起脱单</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/home/qrcode/index" hover-class="none">
+                <text class="text-black">加入单身微信群</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/user/forward/forward" hover-class="none">
+                <text class="text-black">线上线下活动</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/user/setting/setting" hover-class="none">
+                <text class="text-black">设置</text>
+            </navigator>
+        </view>
+    </view>
+
+</view>

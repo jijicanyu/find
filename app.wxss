@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import "./style/base.wxss";
+@import "./style/main.wxss";
+@import "./style/icon.wxss";
+page {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

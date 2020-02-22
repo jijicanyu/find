@@ -1,0 +1,169 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+    <view slot="content" class="text-black">用户详情</view>
+</cu-custom>
+<view class="user-edit-box">
+  <!--照片上传-->
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      我的照片<text class="text-gray user-edit-fontsize">（请至少上传一张真人高质量照片哦）</text>
+    </view>
+  </view>
+  <view class="padding bg-white user-edit-icon-fontsize">
+    <view class="flex p-xs margin-bottom-sm mb-sm">
+      <view bindtap='uploadAvator' data-type="mainImage" data-id="1" class="flex-width-65 flex-height-100 flex-column-center bg-gray radius flex-row-center-center">
+        <text wx:if="{{!avatorUrl}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+        <text wx:if="{{!avatorUrl}}" class="text-gray user-edit-fontsize">（封面大图照片）</text>
+        <image wx:if="{{avatorUrl}}" class="user-avator-url" src="{{avatorUrl}}"></image>
+      </view>
+      <view class="flex-width-35 flex-column-end">
+        <view bindtap='uploadAvator' data-type="otherImage" data-id="2" class="flex-row-center-center margin-bottom-sm flex-height-item bg-gray radius">
+          <text wx:if="{{!avatorRightUrlArr[0].image}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+          <image wx:if="{{avatorRightUrlArr[0].image}}" class="user-avator-url" src="{{avatorRightUrlArr[0].image}}"></image>
+        </view>
+        <view bindtap='uploadAvator' data-type="otherImage" data-id="3" class="flex-row-center-center flex-height-item bg-gray radius">
+          <text wx:if="{{!avatorRightUrlArr[1].image}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+          <image wx:if="{{avatorRightUrlArr[1].image}}" class="user-avator-url" src="{{avatorRightUrlArr[1].image}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="flex p-xs mb-sm">
+      <view bindtap='uploadAvator' data-type="otherImage" data-id="4" class="flex-width-33 flex-row-center-center bg-gray radius">
+        <text wx:if="{{!avatorBottomUrlArr[0].image}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+        <image wx:if="{{avatorBottomUrlArr[0].image}}" class="user-avator-url" src="{{avatorBottomUrlArr[0].image}}"></image>
+      </view>
+      <view bindtap='uploadAvator' data-type="otherImage" data-id="5" class="flex-width-33 flex-row-center-center margin-left-right bg-gray radius">
+        <text wx:if="{{!avatorBottomUrlArr[1].image}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+        <image wx:if="{{avatorRightUrlArr[1].image}}" class="user-avator-url" src="{{avatorBottomUrlArr[1].image}}"></image>
+      </view>
+      <view bindtap='uploadAvator' data-type="otherImage" data-id="6" class="flex-width-33 flex-row-center-center bg-gray radius">
+        <text wx:if="{{!avatorBottomUrlArr[2].image}}" class="cuIcon-add lg text-gray user-icon-fontsize"></text>
+        <image wx:if="{{avatorBottomUrlArr[2].image}}" class="user-avator-url" src="{{avatorBottomUrlArr[2].image}}"></image>
+      </view>
+    </view>
+  </view>
+  <!--form 表单-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action text-black">我的信息</view>
+  </view>
+  <form catchsubmit="submitInfo" catchreset="formReset">
+    <view class="cu-form-group">
+      <view class="title">我的昵称<text class="text-red">*</text></view>
+      <input data-name="nickName" value="{{nickName}}" maxlength='11' bindinput="getValue" />
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的性别：<text class="text-red">*</text><text class="text-grey user-edit-fontsize">（一经选定不可修改）</text></view>
+       <switch data-name="sex" checked="{{sex}}" bindchange="getValue" class="switch-sex"></switch>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的生日：<text class="text-red">*</text><text class="text-grey user-edit-fontsize">（一经选定不可修改）</text></view>
+      <picker data-name="birthday" mode="date" value="{{birthday}}" start="1960-01-01" end="2002-01-01" bindchange="birthdayChange">
+        <view class="picker">
+          {{birthday}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的现居城市：<text class="text-red">*</text></view>
+      <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的家乡：<text class="text-red">*</text></view>
+      <input data-name="address" value="{{address}}" bindinput="getValue" />
+    </view>
+    <view class="cu-form-group margin-top">
+      <view class="title">我的身高：</view>
+      <picker value="{{heightIndex}}" range="{{heights}}" bindchange="heightChange"  >
+        <view class="picker" >
+          {{heights[heightIndex]}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的学校：<text class="text-red">*</text></view>
+      <input data-name="school" value="{{school}}" bindinput="getValue"/>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的学历：<text class="text-red">*</text></view>
+      <picker bindchange="educationChange" value="{{educationIndex}}" range="{{educations}}" range-key="{{'name'}}">
+        <view class="picker">
+          {{educations[educationIndex].name}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的就职公司或行业：<text class="text-red">*</text></view>
+      <input data-name="company" value="{{company}}" bindinput="getValue"/>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的职业：</view>
+      <input data-name="occupation" value="{{occupation}}" bindinput="getValue"/>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的微信号：<text class="text-red">*</text></view>
+      <input data-name="wechatNumber" value="{{wechatNumber}}" bindinput="getValue" placeholder="(本平台为您严格保密您的联系方式， 仅向您同意交换微信的其他用户提供该信息）"/>
+    </view>
+    <!--我的标签-->
+    <view class="cu-list menu margin-bottom-sm shadow-lg">
+        <view bindtap='toTag' data-value="hobby" class="flex-row-between-center cu-item arrow">
+          <view class="content">
+            <text class="text-black">兴趣爱好：</text>
+          </view>
+          <view class="action">
+            <view wx:for="{{hobbys}}" wx:key class="cu-tag round bg-gray light">{{item}}</view>
+          </view>
+        </view>
+        <view bindtap='toTag' data-value="evaluation" class="flex-row-between-center cu-item arrow">
+          <view class="content">
+            <text class="text-black">自我评价：</text>
+          </view>
+          <view class="action">
+            <view wx:for="{{evaluations}}" wx:key class="cu-tag round bg-gray light">{{item}}</view>
+          </view>
+        </view>
+         <view bindtap='toTag' data-value="other" class="flex-row-between-center cu-item arrow">
+          <view class="content">
+            <text class="text-black">其他方面：</text>
+          </view>
+          <view class="action">
+            <view wx:for="{{others}}" wx:key class="cu-tag round bg-gray light">{{item}}</view>
+          </view>
+        </view>
+    </view>
+
+     <!--关于我-->
+    <view class="cu-form-group align-start">
+      <view class="title">自我描述：<text class="text-red">*</text></view>
+    </view>
+    <view class=" cu-form-group bg-gray align-start">
+      <textarea data-name="description" value="{{description}}" bindinput="getValue" placeholder="(可以从以下方面来介绍自己哦，工作、家庭、感情经历、爱情观念、 单身原因等方面都是可以哒～）"></textarea>
+    </view>
+
+    <view class="cu-form-group align-start">
+      <view class="title">期待认识这样：</view>
+    </view>
+    <view class="cu-form-group bg-gray align-start">
+      <textarea data-name="forward" value="{{forward}}" bindinput="getValue" placeholder="(可以介绍一下你理想中的TA是什么样子）"></textarea>
+    </view>
+
+    <view class="cu-form-group align-start">
+      <view class="title">我的日常和爱好：</view>
+    </view>
+    <view class="cu-form-group bg-gray align-start">
+      <textarea data-name="hobby" value="{{hobby}}" bindinput="getValue" placeholder="(可以介绍一下你的日常生活～比如最近在忙的事情，去过哪些城市， 有过什么有趣的人生经历）"></textarea>
+    </view>
+
+    <view class="cu-form-group align-start">
+      <view class="title">我的心愿和理想的生活：</view>
+    </view>
+    <view class="cu-form-group bg-gray align-start">
+      <textarea data-name="wish" value="{{wish}}" bindinput="getValue" placeholder="(告诉TA你期待的生活状态是什么，你有什么小心愿，也许TA会帮你 实现哦～）"></textarea>
+    </view>
+    <view class="padding-xl bg-white">
+      <button formType="submit" class="cu-btn block bg-blue margin-tb-sm lg">完成</button>
+    </view>
+  </form>
+</view>

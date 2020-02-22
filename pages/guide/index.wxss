@@ -1,0 +1,39 @@
+.guide-box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+}
+.guide-img-box{
+  height: 100%;
+  width: 100%;
+}
+.guide-box image{
+  height: 100%;
+}
+.guide-btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.guide-box-text{
+  font-size: 28rpx;
+  text-align: left;
+}
+.guide-check-box{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #999;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.guide-checked{
+  border:none;
+}
+button[disabled]:not([type]){
+    background: rgb(101,179,255);
+    color: #fff;
+}

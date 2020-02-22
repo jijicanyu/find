@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/guide/index",
+    "pages/home/qrcode/index",
+    "pages/home/recommend/index",
+    "pages/home/index",
+    "pages/home/filter/index",
+    "pages/message/index",
+    "pages/user/index",
+    "pages/user/detail/index",
+    "pages/user/userInfo/userInfo",
+    "pages/user/question/question",
+    "pages/user/forward/forward",
+    "pages/user/setting/setting",
+    "pages/user/setting/about/index",
+    "pages/user/tag/tag",
+    "pages/user/private/index",
+    "pages/user/agreement/index",
+    "pages/user/setting/message-setting/message-setting",
+    "pages/components/cropper/cropper"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Find理想之徒",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#b4282d",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "assets/tab-bar/home-active.png",  
+        "iconPath": "assets/tab-bar/home.png",  
+        "pagePath": "pages/home/index",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "assets/tab-bar/message-active.png",  
+        "iconPath": "assets/tab-bar/message.png",  
+        "pagePath": "pages/message/index",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "assets/tab-bar/user-active.png",  
+        "iconPath": "assets/tab-bar/user.png",  
+        "pagePath": "pages/user/index",
+        "text": "我"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/pages/components/header/header"
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

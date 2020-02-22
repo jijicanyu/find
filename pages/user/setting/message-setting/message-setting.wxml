@@ -1,0 +1,26 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+    <view slot="content" class="text-black">消息设置</view>
+</cu-custom>
+<view class="user-box">
+    <!--消息设置-->
+    <view class="cu-list menu margin-bottom-xl shadow-lg">
+        <view class="cu-item">
+          <view class="text-black">每日推荐提醒</view>
+          <view class="action">
+            <switch class="blue sm" checked></switch>
+          </view>
+        </view>
+        <view class="cu-item">
+          <view class="text-black">好友申请通知</view>
+          <view class="action">
+            <switch class="blue sm" checked></switch>
+          </view>
+        </view>
+        <view class="cu-item">
+          <view class="text-black">交换微信提醒</view>
+          <view class="action">
+            <switch class="blue sm" checked></switch>
+          </view>
+        </view>
+    </view>
+</view>

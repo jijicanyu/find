@@ -1,0 +1,23 @@
+.qrcode-box-top{
+	padding: 20rpx 100rpx;
+	font-size: 30rpx;
+	color: #F9F9F9;
+	letter-spacing: 3rpx;
+	line-height: 40rpx;
+	background: linear-gradient(to right, #6594F8 , #346FEF);
+}
+.qrcode-box-middle{
+	width: 430rpx;
+	height: 430rpx;
+	margin: 60rpx auto;
+	border:1rpx dashed #999;
+}
+.qrcode-box-image{
+	height: 100%;
+	padding: 5rpx;
+} 
+.qrcode-box-bottom{
+	font-size: 24rpx;
+	padding: 20rpx 60rpx;
+	color: #717171;
+}

@@ -1,0 +1,68 @@
+
+.filter{
+  padding: 80rpx;
+}
+.filter .cu-form-group{
+  padding: 0;
+}
+.sexFilterBtn{
+  width: 33%;
+  padding: 20rpx 0rpx;
+  display: block;
+  text-align: center;
+  background: #F3F3F3;
+  color: #646464;
+  border-radius: 8rpx;
+}
+.sexFilterBtn:nth-of-type(2){
+  margin: 30rpx 2%;
+}
+.activeStyle{
+  background: #346FEF;
+  color: #fff;
+}
+.vipLabel{
+  margin: 55rpx 0 30rpx;
+  color: #FFB43C;
+  font-size: 32rpx;
+}
+.moreFilter{
+  color: #CBCBCB;
+  font-size:32rpx;
+}
+.sliderHCon {
+  margin: 0 40rpx 0 40rpx;
+  height: 250rpx;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.MoneyValue {
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.showMoney text {
+  margin-right: 30rpx;
+}
+
+.twoSlider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.text-height{
+	margin-right: -5rpx;
+}
+.text-height .cuIcon-right{
+	margin-left: 15rpx;
+	font-size: 34rpx;
+	color: grey;
+}

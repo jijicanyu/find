@@ -1,0 +1,102 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{list.length < 1?false:true}}" isFilter="{{list.length < 1?false:true}}" bind:showFilter="showFilter">
+  <!-- bind:showFilter="showFilter" bind:hideFilter="hideFilter"-->
+  <view slot="content" class="text-black">Find</view>
+</cu-custom>
+<view class="home-box">
+  <view wx:if="{{list.length > 0}}" class="home-list">
+    <!-- 推荐列表 -->
+    <view class="home-item animation-{{animation=='slide-lefts'?'slide-left':''}} animation-reverse basis-sm shadow" wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-class="slide-lefts">
+      <image bindtap="toDetail" src="{{item.image}}"></image>
+      <view class="home-info">
+        <view class="flex-row-between-center">
+          <view class="home-info-name">孙博洋</view>
+          <view class="flex-row-between-center">
+            <view class="home-info-item">现居·北京市</view>
+            <view class="home-info-item">白羊座</view>
+          </view>
+        </view>
+        <view class="home-info-item-box margin-top-sm margin-bottom-sm flex-row-start-center">
+          <view class="home-info-item home-info-item">92年</view>
+          <view class="home-info-item-line"></view>
+          <view class="home-info-item home-info-item">复旦大学</view>
+          <view class="home-info-item-line"></view>
+          <view class="home-info-item home-info-item">山东青岛人</view>
+          <view class="home-info-item-line"></view>
+          <view class="home-info-item home-info-item">硕士</view>
+          <view class="home-info-item-line"></view>
+          <view class="home-info-item home-info-item">183</view>
+        </view>
+      </view>
+      <view class="home-btn">
+        <view bindtap="favor" data-item="{{item}}" class="margin-bottom-sm home-btn-icon-box flex-row-center-center"><text class="cuIcon-favor text-red user-top-btn-icon"></text></view>
+        <view bindtap="pass" data-item="{{item}}" class="home-btn-icon-box flex-row-center-center"><text class="cuIcon-close text-grey user-top-btn-icon"></text></view>
+      </view>
+    </view>
+     <!-- 占位 -->
+    <view class="home-item-bg"></view>
+    <view class="home-item-bg1"></view>
+  </view>
+  <!-- 敬请期待 -->
+  <view wx:if="{{list.length < 1}}" class="home-waiting bg-white">
+      <view class="home-waiting-words text-blue">
+       明晚九点，继续为您推荐优质的小伙伴
+       不见不散~
+      </view>
+      <view class="home-waiting-btns">
+        <button bindtap="recommend" class="cu-btn bg-blue home-waiting-btn">今天推荐给我的人</button>
+      </view>
+      <view class="home-waiting-words text-blue">
+         如何提升曝光值？让更多人认识您？
+      </view>
+      <view class="home-waiting-labels">
+        <view class="home-waiting-label">
+          1、邀请更多新用户注册
+        </view>
+        <view class="home-waiting-label">
+          2、每天都来Find认识新朋友
+        </view>
+        <view class="home-waiting-label">
+          3、提升自己，让自己的介绍更优秀
+        </view>
+        <view class="home-waiting-label">
+          4、上传好看的头像和照片，丰富您的资料
+        </view>
+      </view>
+      <view class="home-waiting-words text-red">
+         您的曝光值高于80%的用户
+      </view>
+      <view class="home-waiting-btns text-blue">
+        <button bindtap="joinFind" class="cu-btn bg-blue home-waiting-btn">加入Find单身微信群，认识更多新朋友</button>
+      </view>
+  </view>
+  <!-- 窗口 -->
+  <view wx:if="{{list.length > 0}}" class="cu-modal {{modalName?'show':''}}">
+    <view class="cu-dialog">
+      <view class="bg-img" style="padding: 50rpx 70rpx;background: #fff">
+        <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+          <swiper-item wx:for="{{swiperList}}" wx:key>
+            <view class="home-modal-title">{{item.title}}</view>
+            <view class="home-modal-description">{{item.description}}</view>
+            <image src="{{item.url}}" mode="aspectFill"></image>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="cu-bar bg-white">
+        <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--filer
+<view class="cu-modal drawer-modal justify-start {{isShowFilter?'show':''}}" bindtap="hideFilter">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow">
+        <view class="content">
+          <view>jshdkf</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+-->

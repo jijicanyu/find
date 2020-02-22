@@ -1,0 +1,14 @@
+ <cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+    <view slot="content" class="text-black">加入Find</view>
+</cu-custom>
+<view class='qrcode-box'>
+ 	<view class='qrcode-box-top'>
+ 		点开下方二维码，长按扫码，关注我们的非单身社交类、纯内容板块【理想之途】微信公众号，后台回复关键词【单身群】即可加群啦，限时免费哦～
+	</view>
+	<view class='qrcode-box-middle'>
+ 		<image class="qrcode-box-image" src="../../../assets/qrcode.png"></image>
+	</view>
+	<view class='qrcode-box-bottom'>
+ 		我们将会建立大群、各城市分群、校友群等，后续还会衍生出老乡群、兴趣群、职业群等，并定期组织线下交流活动哦～
+	</view>
+</view>

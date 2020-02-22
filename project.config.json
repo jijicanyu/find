@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.0",
+	"appid": "wx0a9c883fd56aa7b4",
+	"projectname": "esen-wxapp-board",
+	"isGameTourist": false,
+	"debug": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "board",
+					"pathName": "pages/board/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "applypass",
+					"pathName": "pages/applypass/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "detail",
+					"pathName": "pages/board/detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "regist",
+					"pathName": "pages/regist/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "attend",
+					"pathName": "pages/attend/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logs",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/board/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

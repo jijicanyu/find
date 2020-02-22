@@ -1,0 +1,68 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+  <view slot="content" class="text-black">筛选</view>
+</cu-custom>
+<view class='filter'>
+	<view class="text-grey">性别选择</view>
+	<view class="flex-row-between-center">
+		<view bindtap="{{disableChange?'dissableSexChange':'sexChange'}}" wx:for="{{sexArr}}" wx:key="{{item}}" data-value="{{item.value}}" data-index="{{index}}" class="sexFilterBtn {{selectdIndex == index?'activeStyle':''}}">{{item.label}}</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="text-grey">选择TA的当前所在城市</view>
+		<picker mode="multiSelector" 
+			bindchange="bindMultiPickerChange" 
+			bindcolumnchange="bindMultiPickerColumnChange" 
+			value="{{multiIndex}}" 
+			range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+			</view>
+		</picker>
+	</view> 
+
+	<view class="cu-form-group">
+		<view class="text-grey">选择TA的年龄</view>
+		<picker bindchange="ageChange" value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{ages[ageIndex].name}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="flex-column-center vipLabel">
+		<text>邀请一个新用户，即可获得会员权限，开通</text>
+		<text>以下优先匹配选项</text>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="text-grey">选择TA的身高</view>
+		<picker bindchange="heightChange" value="{{heightIndex}}" range="{{heights}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{heights[heightIndex].name}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="text-grey">选择TA的学历</view>
+		<picker bindchange="educationChange" value="{{educationIndex}}" range="{{educations}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{educations[educationIndex].name}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="text-grey">选择TA的学校类型</view>
+		<picker bindchange="schoolChange" value="{{schoolIndex}}" range="{{schools}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{schools[schoolIndex].name}}
+			</view>
+		</picker>
+	</view>
+	<view class="padding-top-xl padding-bottom-sm flex-column-center moreFilter">
+		<text>更多优先匹配项正在开发中如：家乡/星</text>
+		<text>座等，敬请期待！</text>
+	</view>
+	<view class="bg-white">
+		<button bindtap="goFilter" class="cu-btn block bg-blue margin-tb-sm lg">确定</button>
+	</view>
+</view>

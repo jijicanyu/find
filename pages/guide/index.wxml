@@ -1,0 +1,23 @@
+<view class="guide-box">
+  	<view class="guide-img-box">
+    	<image src="../../assets/guide.jpeg"></image>
+  	</view>
+  	<view class="guide-btn padding-xl bg-white">
+	  	<view class="flex-row-start-center">
+	  		
+	  		<view>
+		  		<view wx:if="{{!checked}}" bindtap="onCheck" data-value='true' class="guide-check-box"></view>
+	  			<view wx:if="{{checked}}" bindtap="onCheck" data-value='false' class="guide-check-box  {{checked?'guide-checked bg-blue':''}}">
+		  			<text class="cuIcon-check xl text-write"></text>
+		  		</view>
+	  		</view>
+	  		
+			<view class="guide-box-text">
+				请仔细阅读“Find | 遇见新朋友”
+				<text bindtap="goPrivate" class="text-blue">隐私政策、</text>
+			    <text bindtap="goAggrement" class="text-blue">用户协议</text>
+			</view>
+		</view>
+    	<button disabled="{{!checked}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cu-btn block bg-blue margin-tb-sm lg">微信登陆</button>
+  	</view>
+</view>

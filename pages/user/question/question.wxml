@@ -1,0 +1,9 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+    <view slot="content" class="text-black">敬请期待</view>
+</cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>我的问题</view>
+  <view class='text-content'>
+    
+  </view>
+</view>
