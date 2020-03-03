@@ -108,7 +108,7 @@
 
 </view>
 <!--年龄选择-->
-<view class="cu-modal bottom-modal {{ageModal?'show':''}}" bindtap="hideAgeModal">
+<view class="cu-modal bottom-modal {{ageModal?'show':''}}" >
   <view class="cu-dialog">
     <view class="cu-bar bg-white">
 	  <view class="action text-blue" bindtap="hideAgeModal">取消</view>
@@ -126,7 +126,7 @@
   </view>
 </view>
 <!--身高选择-->
-<view class="cu-modal bottom-modal {{heightModal?'show':''}}" bindtap="hideHeightModal">
+<view class="cu-modal bottom-modal {{heightModal?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white">
 	  <view class="action text-blue" bindtap="hideHeightModal">取消</view>
@@ -144,7 +144,7 @@
   </view>
 </view>
 <!--学历选择-->
-<view class="cu-modal bottom-modal {{masterModal?'show':''}}" bindtap="hideMasterModal">
+<view class="cu-modal bottom-modal {{masterModal?'show':''}}">
   <view class="cu-dialog" catchtap>
     <view class="cu-bar bg-white">
       <view class="action text-blue" bindtap="hideMasterModal">取消</view>
@@ -159,7 +159,7 @@
   </view>
 </view>
 <!--学校选择-->
-<view class="cu-modal bottom-modal {{schoolModal?'show':''}}" bindtap="hideSchoolModal">
+<view class="cu-modal bottom-modal {{schoolModal?'show':''}}">
   <view class="cu-dialog" catchtap>
     <view class="cu-bar bg-white">
       <view class="action text-blue" bindtap="hideSchoolModal">取消</view>

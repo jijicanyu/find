@@ -1,7 +1,7 @@
 @import "../../style/animation.wxss";
 .home-box{
   position: absolute;
-  top: 150rpx;
+  top: 64px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -113,6 +113,9 @@
   height:195rpx !important;
 }
 /*结束推荐*/
+.home-waiting{
+  background:  #D5BCDE;
+}
 .home-waiting-words{
   padding: 30rpx 70rpx;
   font-size: 36rpx;
@@ -137,6 +140,7 @@
 .icon-wait-bg{
   height: 271rpx;
   width: 683rpx;
-  margin: 58rpx auto;
+  margin: 0 auto;
   display: block;
+  margin-top: 58rpx;
 }
