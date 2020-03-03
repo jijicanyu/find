@@ -39,3 +39,7 @@
 .user-box .content{
   font-size: 28rpx;
 }
+.icon-share{
+  width:34rpx;
+  height:34rpx;
+}

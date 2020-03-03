@@ -19,51 +19,84 @@
 		</picker>
 	</view> 
 
-	<view class="cu-form-group">
+	<view class="cu-form-group cu-item arrow" bindtap="showAgeFilter">
 		<view class="text-grey">选择TA的年龄</view>
-		<picker bindchange="ageChange" value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
+		<view class="text-black flex-row-end bottomSelect">
+			<text>{{minAge}}~{{maxAge}}</text>
+			<text class="cuIcon-right"></text>
+		</view>
+		<!--<picker value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
 			<view class="picker">
-				{{ages[ageIndex].name}}
+				{{ages[ageIndex].name}} bindchange="ageChange"
 			</view>
-		</picker>
+		</picker>-->
 	</view>
-
-	<view class="top">min 100 max 1000</view>
-    <view class="des">{{low1}}-{{heigh1}}</view>
-<view class="zy-slider">
-    <zy-slider id="zy-slider1" minValue="{{low1}}" maxValue="{{heigh1}}" min="18" max="100" blockColor="#0099FF" backgroundColor="#B0C4DE" selectedColor="#FF1493" bind:lowValueChange="lowValueChangeAction1"
-                bind:heighValueChange="heighValueChangeAction1" />
-</view>
 
 	<view class="flex-column-center vipLabel">
 		<text>邀请一个新用户，即可获得会员权限，开通</text>
 		<text>以下优先匹配选项</text>
 	</view>
 
-	<view class="cu-form-group">
+	<!--<view class="cu-form-group">
 		<view class="text-grey">选择TA的身高</view>
 		<picker bindchange="heightChange" value="{{heightIndex}}" range="{{heights}}" range-key="{{'name'}}">
 			<view class="picker">
 				{{heights[heightIndex].name}}
 			</view>
 		</picker>
+	</view>-->
+	<view class="cu-form-group cu-item arrow" bindtap="showHeightFilter">
+		<view class="text-grey">选择TA的身高</view>
+		<view class="text-black flex-row-end bottomSelect">
+			<text>{{minHeight}}~{{maxHeight}}</text>
+			<text class="cuIcon-right"></text>
+		</view>
+		<!--<picker value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{ages[ageIndex].name}} bindchange="ageChange"
+			</view>
+		</picker>-->
 	</view>
 
-	<view class="cu-form-group">
+	<!--<view class="cu-form-group">
 		<view class="text-grey">选择TA的学历</view>
 		<picker bindchange="educationChange" value="{{educationIndex}}" range="{{educations}}" range-key="{{'name'}}">
 			<view class="picker">
 				{{educations[educationIndex].name}}
 			</view>
 		</picker>
+	</view>-->
+	<view class="cu-form-group cu-item arrow" bindtap="showMasterFilter">
+		<view class="text-grey">选择TA的学历</view>
+		<view class="text-black flex-row-end bottomSelect">
+			<text class="cu-tag round bg-blue light" wx:for="{{masterCheckedArr}}" wx:key="{{index}}">{{item.name}}</text>
+			<text class="cuIcon-right"></text>
+		</view>
+		<!--<picker value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{ages[ageIndex].name}} bindchange="ageChange"
+			</view>
+		</picker>-->
 	</view>
-	<view class="cu-form-group">
+	<!--<view class="cu-form-group">
 		<view class="text-grey">选择TA的学校类型</view>
 		<picker bindchange="schoolChange" value="{{schoolIndex}}" range="{{schools}}" range-key="{{'name'}}">
 			<view class="picker">
 				{{schools[schoolIndex].name}}
 			</view>
 		</picker>
+	</view>-->
+	<view class="cu-form-group cu-item arrow" bindtap="showSchoolFilter">
+		<view class="text-grey">选择TA的学校类型</view>
+		<view class="text-black flex-row-end bottomSelect">
+			<text class="cu-tag round bg-blue light" wx:for="{{schoolCheckedArr}}" wx:key="{{index}}">{{item.name}}</text>
+			<text class="cuIcon-right"></text>
+		</view>
+		<!--<picker value="{{ageIndex}}" range="{{ages}}" range-key="{{'name'}}">
+			<view class="picker">
+				{{ages[ageIndex].name}} bindchange="ageChange"
+			</view>
+		</picker>-->
 	</view>
 	<view class="padding-top-xl padding-bottom-sm flex-column-center moreFilter">
 		<text>更多优先匹配项正在开发中如：家乡/星</text>
@@ -73,4 +106,70 @@
 		<button bindtap="goFilter" class="cu-btn block bg-blue margin-tb-sm lg">确定</button>
 	</view>
 
+</view>
+<!--年龄选择-->
+<view class="cu-modal bottom-modal {{ageModal?'show':''}}" bindtap="hideAgeModal">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+	  <view class="action text-blue" bindtap="hideAgeModal">取消</view>
+      <view class="action text-green" bindtap="confirmAgeModal">确定</view>
+    </view>
+    <view class="padding-xl">
+    	<view class="des">{{lowAge}} ~ {{heighAge}}</view>
+		<view class="zy-slider">
+			<zy-slider id="zy-slider1" minValue="{{lowAge}}" maxValue="{{heighAge}}" min="18" max="100" blockColor="#0099FF" 
+			backgroundColor="#B0C4DE" selectedColor="#FF1493" 
+			bind:lowValueChange="lowAgeValueChangeAction1"
+			bind:heighValueChange="heighAgeValueChangeAction1" />
+		</view>
+    </view>
+  </view>
+</view>
+<!--身高选择-->
+<view class="cu-modal bottom-modal {{heightModal?'show':''}}" bindtap="hideHeightModal">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+	  <view class="action text-blue" bindtap="hideHeightModal">取消</view>
+      <view class="action text-green" bindtap="confirmHeightModal">确定</view>
+    </view>
+    <view class="padding-xl">
+    	<view class="des">{{lowHeight}} ~ {{heighHeight}}</view>
+		<view class="zy-slider">
+			<zy-slider id="zy-slider2" minValue="{{lowHeight}}" maxValue="{{heighHeight}}" min="140" max="200" blockColor="#0099FF" 
+			backgroundColor="#B0C4DE" selectedColor="#FF1493" 
+			bind:lowValueChange="lowHeightValueChangeAction1"
+			bind:heighValueChange="heighHeightValueChangeAction1" />
+		</view>
+    </view>
+  </view>
+</view>
+<!--学历选择-->
+<view class="cu-modal bottom-modal {{masterModal?'show':''}}" bindtap="hideMasterModal">
+  <view class="cu-dialog" catchtap>
+    <view class="cu-bar bg-white">
+      <view class="action text-blue" bindtap="hideMasterModal">取消</view>
+      <view class="action text-green" bindtap="confirmMasterModal">确定</view>
+    </view>
+    <view class="grid col-1 padding-sm">
+      <view wx:for="{{checkMasterBox}}" class="padding-xs" wx:key="{{index}}">
+        <button class="cu-btn orange xs block {{item.checked?'bg-orange':'line-orange'}}" bindtap="chooseMasterCheckbox" data-value="{{item.value}}"> {{item.name}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
+<!--学校选择-->
+<view class="cu-modal bottom-modal {{schoolModal?'show':''}}" bindtap="hideSchoolModal">
+  <view class="cu-dialog" catchtap>
+    <view class="cu-bar bg-white">
+      <view class="action text-blue" bindtap="hideSchoolModal">取消</view>
+      <view class="action text-green" bindtap="confirmSchoolModal">确定</view>
+    </view>
+    <view class="grid col-1 padding-sm">
+      <view wx:for="{{checkSchoolBox}}" class="padding-xs" wx:key="{{index}}">
+        <button class="cu-btn orange xs block {{item.checked?'bg-orange':'line-orange'}}" bindtap="chooseSchoolCheckbox" data-value="{{item.value}}"> {{item.name}}
+        </button>
+      </view>
+    </view>
+  </view>
 </view>

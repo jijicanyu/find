@@ -30,17 +30,17 @@ Page({
       id: 0,
       title: '心动的TA, 关注一下',
       description:'每日21点整推荐5位适合你的 新朋友，快去认识TA们吧！',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+      url: '../../assets/guide1.png'
     }, {
       id: 1,
       title: '互相答题, 加深了解',
       description:'遇到心动的人，点击照片任意位置，进入TA的主页回答TA的问题后，即可申请交换微信哦~',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
+      url: '../../assets/guide2.png'
     }, {
       id: 2,
       title: '真诚社交,精选推荐',
       description:'每日21点整推荐5位适合你的 新朋友，快去认识TA们吧！',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+      url: '../../assets/guide3.png'
     }],
     filterData:{},
     from:''

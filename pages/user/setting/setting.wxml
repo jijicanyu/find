@@ -4,24 +4,24 @@
 <view class="user-box">
     <!--设置列表-list-->
     <view class="cu-list menu margin-bottom-xl shadow-lg">
-        <view class="cu-item arrow">
+        <!--<view class="cu-item arrow">
             <navigator class="content" url="/pages/about/log/log" hover-class="none">
                 <text class="text-black">隐私管理</text>
             </navigator>
-        </view>
+        </view>-->
         <view class="cu-item arrow">
             <navigator class="content" url="/pages/user/setting/message-setting/message-setting" hover-class="none">
                 <text class="text-black">消息通知设置</text>
             </navigator>
         </view>
-        <view class="cu-item arrow" bindtap="goAuthorize">
+        <!--<view class="cu-item arrow" bindtap="goAuthorize">
             <text class="text-black">授权设置</text>
-        </view>
-        <view class="cu-item arrow">
+        </view>-->
+        <!--<view class="cu-item arrow">
             <navigator class="content" url="/pages/user/forward/forward" hover-class="none">
                 <text class="text-black">清除缓存</text>
             </navigator>
-        </view>
+        </view>-->
         <view class="cu-item">
           <view class="text-black">允许将我推荐给别人</view>
           <view class="action">

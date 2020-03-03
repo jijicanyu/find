@@ -4,6 +4,8 @@
 }
 .filter .cu-form-group{
   padding: 0;
+  border-bottom: 1rpx solid #eee;
+  border-top:none;
 }
 .sexFilterBtn{
   width: 33%;
@@ -49,6 +51,15 @@
 
 .showMoney text {
   margin-right: 30rpx;
+}
+.bottomSelect{
+  width: 50%;
+  align-item:center;
+}
+.bottomSelect .cuIcon-right{
+  font-size: 32rpx;
+  color: grey;
+  margin-right: -5rpx;
 }
 
 .twoSlider {

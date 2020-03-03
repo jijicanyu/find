@@ -2,7 +2,7 @@
   <!-- bind:showFilter="showFilter" bind:hideFilter="hideFilter"-->
   <view slot="content" class="text-black">Find</view>
 </cu-custom>
-<view class="home-box">
+<view class="home-box {{list.length < 1?'bgcolor':''}}">
   <view wx:if="{{list.length > 0}}" class="home-list">
     <!-- 推荐列表 -->
     <view class="home-item animation-{{animation=='slide-lefts'?'slide-left':''}} animation-reverse basis-sm shadow" wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-class="slide-lefts">
@@ -37,7 +37,7 @@
     <view class="home-item-bg1"></view>
   </view>
   <!-- 敬请期待 -->
-  <view wx:if="{{list.length < 1}}" class="home-waiting bg-white">
+  <view wx:if="{{list.length < 1}}" class="home-waiting">
       <view class="home-waiting-words text-blue">
        明晚九点，继续为您推荐优质的小伙伴
        不见不散~
@@ -68,6 +68,7 @@
       <view class="home-waiting-btns text-blue">
         <button bindtap="joinFind" class="cu-btn bg-blue home-waiting-btn">加入Find单身微信群，认识更多新朋友</button>
       </view>
+      <image class="icon-wait-bg" src="../../assets/wait_bg.png"></image>
   </view>
   <!-- 窗口 -->
   <view wx:if="{{list.length > 0}}" class="cu-modal {{modalName?'show':''}}">
@@ -77,7 +78,7 @@
           <swiper-item wx:for="{{swiperList}}" wx:key>
             <view class="home-modal-title">{{item.title}}</view>
             <view class="home-modal-description">{{item.description}}</view>
-            <image src="{{item.url}}" mode="aspectFill"></image>
+            <image class="home-modal-img" src="{{item.url}}" mode="aspectFill"></image>
           </swiper-item>
         </swiper>
       </view>

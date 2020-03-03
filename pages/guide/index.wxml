@@ -1,6 +1,6 @@
 <view class="guide-box">
   	<view class="guide-img-box">
-    	<image src="../../assets/guide.jpeg"></image>
+    	<image src="../../assets/guide.png"></image>
   	</view>
   	<view class="guide-btn padding-xl bg-white">
 	  	<view class="flex-row-start-center">

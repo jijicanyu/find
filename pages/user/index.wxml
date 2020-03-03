@@ -28,6 +28,7 @@
                 <text class="text-black">做个自我介绍</text>
             </view>
             <view class="action">
+                <!--<image class="icon-share" src="../../assets/share.png"></image>-->
                 <view class="cu-tag round bg-blue light">分享</view>
             </view>
         </view>
