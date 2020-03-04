@@ -35,7 +35,11 @@ Page({
       url: '../message/index'
     })
   },
-
+  goComplain(){
+    wx.navigateTo({
+      url: './complain/index'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

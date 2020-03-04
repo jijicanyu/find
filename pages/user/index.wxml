@@ -22,7 +22,7 @@
         </view>
     </view>
     <!--用户列表-list-->
-    <view class="cu-list menu margin-top-sm margin-bottom-xl shadow-lg">
+    <view class="cu-list menu margin-top-sm shadow-lg">
         <view class="cu-item">
             <view class="content">
                 <text class="text-black">做个自我介绍</text>
@@ -69,4 +69,8 @@
         </view>
     </view>
 
+    <view class="padding-lg bg-white grid col-2 flex-row-center-center">
+        <button class="cu-btn block bg-blue margin-right-sm margin-tb-sm lg">联系客服</button>
+        <button bindtap="goComplain" class="cu-btn block bg-blue margin-left-sm margin-tb-sm lg">吐槽建议</button>
+    </view>
 </view>

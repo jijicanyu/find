@@ -1,0 +1,60 @@
+<cu-custom bgColor="bg-gradual-write" isBack="{{true}}">
+    <view slot="content" class="text-black">Find</view>
+</cu-custom>
+<view class='margin-xl bg-greyLight'>
+  <view class="margin-bottom-xl complain-label">请简述您需要提交的举报信息或反馈~</view>  
+  <view bindtap="editComplain1">
+    <view class="flex-row-between-center complain-item">
+      <text>发布色情/违法不良信息</text>
+		  <text class="cuIcon-right {{editComplain1?'cuIcon-right-active':''}}"></text>
+    </view>
+	</view>
+  <view class="text-area-box complain-label" hidden="{{!editComplain1}}">
+    <textarea class="text-area bg-write" data-name="editComplain1Value" value="{{editComplain1Value}}" bindTap="editComplain1Change" placeholder="请填写具体情况："></textarea>
+  </view>
+
+  <view bindtap="editComplain2">
+    <view class="flex-row-between-center complain-item">
+      <text>欺诈骗钱/虚假信息</text>
+		  <text class="cuIcon-right {{editComplain2?'cuIcon-right-active':''}}"></text>
+    </view>
+	</view>
+  <view class="text-area-box complain-label" hidden="{{!editComplain2}}">
+    <textarea class="text-area bg-write" data-name="editComplain2Value" value="{{editComplain2Value}}" bindTap="editComplain2Change" placeholder="请填写具体情况："></textarea>
+  </view>
+
+  <view bindtap="editComplain3">
+    <view class="flex-row-between-center complain-item">
+      <text>性骚扰</text>
+		  <text class="cuIcon-right {{editComplain3?'cuIcon-right-active':''}}"></text>
+    </view>
+	</view>
+  <view class="text-area-box complain-label" hidden="{{!editComplain3}}">
+    <textarea class="text-area bg-write" data-name="editComplain3Value" value="{{editComplain3Value}}" bindTap="editComplain3Change" placeholder="请填写具体情况："></textarea>
+  </view>
+
+  <view bindtap="editComplain4">
+    <view class="flex-row-between-center complain-item">
+      <text>侵害未成年人权益</text>
+		  <text class="cuIcon-right {{editComplain4?'cuIcon-right-active':''}}"></text>
+    </view>
+	</view>
+  <view class="text-area-box complain-label" hidden="{{!editComplain4}}">
+    <textarea class="text-area bg-write" data-name="editComplain4Value" value="{{editComplain4Value}}" bindTap="editComplain4Change" placeholder="请填写具体情况："></textarea>
+  </view>
+
+
+  <view bindtap="editComplain5">
+    <view class="flex-row-between-center complain-item">
+      <text>其他</text>
+		  <text class="cuIcon-right {{editComplain5?'cuIcon-right-active':''}}"></text>
+    </view>
+	</view>
+  <view class="text-area-box complain-label" hidden="{{!editComplain5}}">
+    <textarea class="text-area bg-write" data-name="editComplain5Value" value="{{editComplain5Value}}" bindTap="editComplain5Change" placeholder="请填写具体情况："></textarea>
+  </view>
+  
+  <view class="margin-top-lg bg-white">
+    <button bindtap="goSubmit" class="cu-btn block bg-blue margin-tb-sm lg">确定</button>
+  </view>
+</view>

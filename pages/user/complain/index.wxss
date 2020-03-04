@@ -1,0 +1,23 @@
+.complain-label{
+    font-size:26rpx;
+    color: #3873F0;
+}
+.complain-item{
+    color: #525252;
+    background: #F8F8F8;
+    padding: 25rpx 30rpx;
+    margin-top: 20rpx;
+}
+.text-area-box{
+    background: #F8F8F8;
+    padding: 0 30rpx 20rpx;
+    width: 278px;
+}
+.text-area-box textarea{
+    width: 100%;
+    background: #fff;
+    padding: 5rpx;
+}
+.cuIcon-right-active{
+    transform: rotate(90deg);
+}
